@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign in with Google</h2>
+
+        <!-- Google Sign-In Configuration -->
+        <div
+            id="g_id_onload"
+            data-client_id="390015650710-49duep76jhv0d54bifmsvfp0ainmlqi0.apps.googleusercontent.com"
+            data-callback="handleCredentialResponse">
+        </div>
+
+        <!-- Google Sign-In Button -->
+        <div
+            class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="signin_with"
+            data-shape="rectangular">
+        </div>
+
+        <div class="profile" id="profile">
+            <img id="picture" src="" alt="Profile Picture">
+            <h3 id="name"></h3>
+            <p id="email"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
