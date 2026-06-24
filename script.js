@@ -26,3 +26,14 @@ function handleCredentialResponse(response) {
     //     })
     // });
 }
+function logout() {
+    google.accounts.id.disableAutoSelect();
+
+    document.getElementById("profile").style.display = "none";
+
+    document.getElementById("name").textContent = "";
+    document.getElementById("email").textContent = "";
+    document.getElementById("picture").src = "";
+
+    document.querySelector(".g_id_signin").style.display = "block";
+}
